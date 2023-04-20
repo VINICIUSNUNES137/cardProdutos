@@ -6,26 +6,32 @@ import { produtos } from "./produtos.js"
 
 const precos = [10, 23, 51, 90]
 const criarCard = (produto) => {
-    const card = document.createElement('div')
-    card.classList.add('card')
+    const card = document.createElement('card-produto')
 
-    const img = document.createElement('img')
-    img.classList.add('card__image')
-    img.src = `./img/${produto.image}`
+    card.imagem = `./img/${produto.image}`
+    card.titulo = produto.name
+    card.descricao = produto.description
+    card.preco = produto.price
 
-    const titulo = document.createElement('h5')
-    titulo.classList.add('card__title')
-    titulo.textContent = produto.name
+    // card.classList.add('card')
 
-    const descricao = document.createElement('p')
-    descricao.classList.add('card__description')
-    descricao.textContent = produto.description
+    // const img = document.createElement('img')
+    // img.classList.add('card__image')
+    // img.src = `./img/${produto.image}`
 
-    const preco = document.createElement('span')
-    preco.classList.add('card__price')
-    preco.textContent = produto.price
+    // const titulo = document.createElement('h5')
+    // titulo.classList.add('card__title')
+    // titulo.textContent = produto.name
 
-    card.append(img, titulo, descricao, preco)
+    // const descricao = document.createElement('p')
+    // descricao.classList.add('card__description')
+    // descricao.textContent = produto.description
+
+    // const preco = document.createElement('span')
+    // preco.classList.add('card__price')
+    // preco.textContent = produto.price
+
+    // card.append(img, titulo, descricao, preco)
 
     return card
 }
